@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "74039729553",
+    "firebase_url": "https://ibuild-e7d47.firebaseio.com",
+    "project_id": "ibuild-e7d47",
+    "storage_bucket": "ibuild-e7d47.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:74039729553:android:40512b39fe8c885d8d8e30",
+        "android_client_info": {
+          "package_name": "com.example.ibuild"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "74039729553-6spbbhabi1kffhba5vl8hhgn9ngkihk5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAG59aKtQp72uEGwz8YO10QfzQSuM_GwME"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "74039729553-6spbbhabi1kffhba5vl8hhgn9ngkihk5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
