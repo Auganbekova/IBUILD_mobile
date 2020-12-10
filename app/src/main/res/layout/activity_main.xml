@@ -24,7 +24,6 @@
             android:orientation="horizontal">
 
             <Button
-                android:id="@+id/add_item"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_weight="1"
@@ -36,6 +35,7 @@
                 android:text="Договор" />
 
             <Button
+                android:id="@+id/btn_work_chat"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_weight="1"
@@ -58,6 +58,7 @@
                 android:text="Работа" />
 
             <Button
+                android:id="@+id/btn_work_profile"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_weight="1"

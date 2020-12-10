@@ -5,9 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".ProfileActivity">
+    tools:context=".ChatListActivity">
 
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/masters"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:listitem="@layout/master_layout" />
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -32,19 +36,18 @@
                 android:text="Договор" />
 
             <Button
-                android:id="@+id/btn_profile_chat"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_weight="1"
                 android:paddingTop="5dp"
-                android:background="@drawable/btn_menu_background"
+                android:background="@drawable/btn_menu_background_focused"
                 android:drawableTop="@drawable/chaty"
                 android:textColor="#FFFFFF"
                 android:textSize="12dp"
                 android:text="Чаты" />
 
             <Button
-                android:id="@+id/btn_profile_work"
+                android:id="@+id/btn_chat_work"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_weight="1"
@@ -56,11 +59,12 @@
                 android:text="Работа" />
 
             <Button
+                android:id="@+id/btn_chat_profile"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_weight="1"
                 android:paddingTop="5dp"
-                android:background="@drawable/btn_menu_background_focused"
+                android:background="@drawable/btn_menu_background"
                 android:drawableTop="@drawable/profile"
                 android:textColor="#FFFFFF"
                 android:textSize="12dp"
