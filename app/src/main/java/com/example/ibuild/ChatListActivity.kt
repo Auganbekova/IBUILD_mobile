@@ -17,10 +17,12 @@ class ChatListActivity : AppCompatActivity() {
         btn_chat_profile.setOnClickListener {
             val intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)
+            this.finish()
         }
         btn_chat_work.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+            this.finish()
         }
     }
 }

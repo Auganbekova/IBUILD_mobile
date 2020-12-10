@@ -8,9 +8,7 @@ import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
 
 class LoginActivity : AppCompatActivity() {
-    private val auth by lazy {
-        FirebaseAuth.getInstance()
-    }
+    private val auth by lazy { FirebaseAuth.getInstance() }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,6 +19,7 @@ class LoginActivity : AppCompatActivity() {
     private fun setUpViews() {
         login.setOnClickListener {
             signIn(txt_email.text.toString(), txt_password.text.toString())
+
         }
         dh_account.setOnClickListener {
             val intent = Intent(this, RegistrationActivity::class.java)
@@ -34,6 +33,7 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this, "Success", Toast.LENGTH_LONG).show()
                 val intent = Intent(this, MainActivity::class.java)
                 startActivity(intent)
+                this.finish()
                 return@addOnCompleteListener
             }
             Toast.makeText(this, task.exception?.message, Toast.LENGTH_LONG).show()
