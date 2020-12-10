@@ -28,25 +28,37 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_weight="1"
-                android:text="Новый будильник" />
+                android:background="@drawable/btn_menu_background"
+                android:textColor="#FFFFFF"
+                android:textSize="12dp"
+                android:text="Договор" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_weight="1"
-                android:text="Новый будильник" />
+                android:background="@drawable/btn_menu_background"
+                android:textColor="#FFFFFF"
+                android:textSize="12dp"
+                android:text="Чаты" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_weight="1"
-                android:text="Новый будильник" />
+                android:background="@drawable/btn_menu_background"
+                android:textColor="#FFFFFF"
+                android:textSize="12dp"
+                android:text="Работа" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_weight="1"
-                android:text="Новый будильник" />
+                android:background="@drawable/btn_menu_background"
+                android:textColor="#FFFFFF"
+                android:textSize="12dp"
+                android:text="Профиль" />
         </LinearLayout>
 
     </RelativeLayout>
