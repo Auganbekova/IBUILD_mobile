@@ -13,7 +13,7 @@ class ProfileActivity : AppCompatActivity() {
         setupViews()
     }
 
-    private fun setupViews(){
+    private fun setupViews() {
         btn_profile_work.setOnClickListener {
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)

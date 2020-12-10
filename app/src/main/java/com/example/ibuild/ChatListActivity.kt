@@ -13,7 +13,7 @@ class ChatListActivity : AppCompatActivity() {
         setupViews()
     }
 
-    private fun setupViews(){
+    private fun setupViews() {
         btn_chat_profile.setOnClickListener {
             val intent = Intent(this, ProfileActivity::class.java)
             startActivity(intent)

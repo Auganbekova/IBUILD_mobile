@@ -22,7 +22,6 @@ class RegistrationActivity : AppCompatActivity() {
     }
 
     private fun setUpViews() {
-
         txt_email.setOnFocusChangeListener { v, hasFocus ->
             if (!hasFocus) {
                 if (txt_email.text.toString().length < 6) {
@@ -46,11 +45,13 @@ class RegistrationActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener { task ->
             if (task.isSuccessful) {
                 Toast.makeText(this, "Success", Toast.LENGTH_LONG).show()
-                loadUserData(task.result?.user?.uid!!, User(task.result?.user?.uid!!, email, name, surname))
+                loadUserData(
+                    task.result?.user?.uid!!,
+                    User(task.result?.user?.uid!!, email, name, surname)
+                )
                 val intent = Intent(this, LoginActivity::class.java)
                 startActivity(intent)
                 return@addOnCompleteListener
-
             }
             Toast.makeText(this, task.exception?.message, Toast.LENGTH_LONG).show()
         }
