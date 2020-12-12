@@ -13,6 +13,8 @@ class LoginActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+        supportActionBar!!.title = "Login"
+
         setUpViews()
     }
 
@@ -21,7 +23,7 @@ class LoginActivity : AppCompatActivity() {
             signIn(txt_email.text.toString(), txt_password.text.toString())
 
         }
-        dh_account.setOnClickListener {
+        txt_dont_have_account.setOnClickListener {
             val intent = Intent(this, RegistrationActivity::class.java)
             startActivity(intent)
         }

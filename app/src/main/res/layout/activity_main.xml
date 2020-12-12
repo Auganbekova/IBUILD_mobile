@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#1A85F1"
     tools:context=".MainActivity">
 
     <androidx.recyclerview.widget.RecyclerView
@@ -27,47 +28,47 @@
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_weight="1"
-                android:paddingTop="5dp"
                 android:background="@drawable/btn_menu_background"
                 android:drawableTop="@drawable/dogovor"
+                android:paddingTop="5dp"
+                android:text="Договор"
                 android:textColor="#FFFFFF"
-                android:textSize="12dp"
-                android:text="Договор" />
+                android:textSize="12sp" />
 
             <Button
                 android:id="@+id/btn_work_chat"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_weight="1"
-                android:paddingTop="5dp"
                 android:background="@drawable/btn_menu_background"
                 android:drawableTop="@drawable/chaty"
+                android:paddingTop="5dp"
+                android:text="Чаты"
                 android:textColor="#FFFFFF"
-                android:textSize="12dp"
-                android:text="Чаты" />
+                android:textSize="12sp" />
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_weight="1"
-                android:paddingTop="5dp"
                 android:background="@drawable/btn_menu_background_focused"
                 android:drawableTop="@drawable/rabota"
+                android:paddingTop="5dp"
+                android:text="Работа"
                 android:textColor="#FFFFFF"
-                android:textSize="12dp"
-                android:text="Работа" />
+                android:textSize="12sp" />
 
             <Button
                 android:id="@+id/btn_work_profile"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
                 android:layout_weight="1"
-                android:paddingTop="5dp"
                 android:background="@drawable/btn_menu_background"
                 android:drawableTop="@drawable/profile"
+                android:paddingTop="5dp"
+                android:text="Профиль"
                 android:textColor="#FFFFFF"
-                android:textSize="12dp"
-                android:text="Профиль" />
+                android:textSize="12sp" />
         </LinearLayout>
 
     </RelativeLayout>

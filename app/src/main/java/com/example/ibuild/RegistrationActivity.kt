@@ -17,12 +17,13 @@ class RegistrationActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registration)
+        supportActionBar!!.title = "Registration"
 
         setUpViews()
     }
 
     private fun setUpViews() {
-        txt_email.setOnFocusChangeListener { v, hasFocus ->
+        txt_email.setOnFocusChangeListener { _, hasFocus ->
             if (!hasFocus) {
                 if (txt_email.text.toString().length < 6) {
                     Log.d("checklength", "no")

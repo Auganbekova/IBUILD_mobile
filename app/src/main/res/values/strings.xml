@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">IBUILD</string>
+    <string name="don_t_have_an_account"><u>Don't have an account?</u></string>
+    <string name="you_have_an_account_sign_in"><u>You have an account? Sign In!</u></string>
 </resources>
