@@ -3,8 +3,9 @@ package com.example.ibuild
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.fragment.app.Fragment
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     private val auth by lazy { FirebaseAuth.getInstance() }
@@ -22,16 +23,30 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun setupViews() {
-        btn_work_chat.setOnClickListener {
-            val intent = Intent(this, ChatListActivity::class.java)
-            startActivity(intent)
-            this.finish()
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_navigation)
+        bottomNav.setOnNavigationItemSelectedListener(navListener)
+    }
+
+    private val navListener = BottomNavigationView.OnNavigationItemSelectedListener() {
+        var selectedFragment: Fragment = DealsFragment(1)
+
+        when (it.itemId) {
+            R.id.nav_deals -> {
+                selectedFragment = DealsFragment(1)
+            }
+            R.id.nav_chats -> {
+                selectedFragment = ChatsListFragment(2)
+            }
+            R.id.nav_works -> {
+                selectedFragment = WorkFragment(3)
+            }
+            R.id.nav_profile -> {
+                selectedFragment = ProfileFragment(4)
+            }
         }
 
-        btn_work_profile.setOnClickListener {
-            val intent = Intent(this, ProfileActivity::class.java)
-            startActivity(intent)
-            this.finish()
-        }
+        supportFragmentManager.beginTransaction().replace(R.id.fragment_container, selectedFragment).commit()
+
+        true
     }
 }
