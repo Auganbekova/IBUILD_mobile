@@ -130,7 +130,7 @@
         android:textAllCaps="false"
         android:textColor="#FFFFFF"
         android:textSize="16sp"
-        android:text="Register" />
+        android:text="Регистарция" />
 
     <TextView
         android:id="@+id/txt_have_account"
