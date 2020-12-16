@@ -1,5 +1,6 @@
 package com.example.ibuild
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -20,7 +21,8 @@ class WorkFragment(contentLayoutId: Int) : Fragment(contentLayoutId) {
 
     private fun setupViews(view: View){
         view.btn_add_work.setOnClickListener {
-
+            val intent = Intent(activity, AddWorkActivity::class.java)
+            activity!!.startActivity(intent)
         }
     }
 }

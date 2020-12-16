@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddWorkActivity"
+    android:background="#1A85F1"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#636363"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/shape_back">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_title"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textColorHint="#6F6F6F"
+            android:textColor="#000000"
+            android:paddingLeft="10dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:hint="Заголовок" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/spin_category"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="10dp"
+        android:spinnerMode="dropdown"
+        android:background="@drawable/shape_back"/>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#636363"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/shape_back">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_experience"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#6F6F6F"
+            android:textColor="#000000"
+            android:paddingLeft="10dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:hint="Стаж" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#636363"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/shape_back">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_self"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#6F6F6F"
+            android:textColor="#000000"
+            android:lines="8"
+            android:minLines="1"
+            android:maxLines="10"
+            android:gravity="top|left"
+            android:scrollbars="vertical"
+            android:paddingLeft="10dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:hint="Что вы можете предложить?" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColorHint="#636363"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/shape_back">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="#6F6F6F"
+            android:textColor="#000000"
+            android:paddingLeft="10dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:hint="Цена" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_add"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/button_back"
+        android:fontFamily="@font/montserrat_bold"
+        android:textAllCaps="false"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
+        android:text="Отправить" />
+
+</LinearLayout>
