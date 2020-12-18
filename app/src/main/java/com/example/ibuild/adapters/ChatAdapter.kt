@@ -36,7 +36,7 @@ class ChatAdapter (
             }
 
             view.chat_last_message.text = chats.lastMessage
-            view.chat_date.text = chats.lastMessageTimestamp.toGMTString()
+            view.chat_date.text = chats.lastMessageTimestamp
 
             view.setOnClickListener{
                 onItemClick(chats)

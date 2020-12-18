@@ -45,14 +45,6 @@
             android:textSize="18sp"
             android:textColor="#FFFFFF"
             android:text="Message"/>
-        <TextView
-            android:id="@+id/status"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:textSize="18sp"
-            android:textColor="#FFFFFF"
-            android:text="online"/>
 
     </LinearLayout>
 </LinearLayout>

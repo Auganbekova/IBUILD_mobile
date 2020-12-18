@@ -52,7 +52,7 @@ class WorkInfoActivity : AppCompatActivity() {
                         Chat(auth.currentUser!!.uid + workerId,
                             listOf(auth.currentUser!!.uid, workerId),
                             listOf(curUser[0], worker), "",
-                            Date()))
+                            Date().toString()))
                     val intent = Intent(this, ChatActivity::class.java)
                     intent.putExtra("data", auth.currentUser!!.uid + workerId)
                     intent.putExtra("partnerUsername", worker.email)
