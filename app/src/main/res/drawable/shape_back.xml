@@ -6,6 +6,6 @@
         android:bottomRightRadius="10dp"
         android:topLeftRadius="10dp"
         android:topRightRadius="10dp" />
-    <solid android:color="#FFFFFF" />
+    <solid android:color="#7FAEF7" />
 
 </shape>
