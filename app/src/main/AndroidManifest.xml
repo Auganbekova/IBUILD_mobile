@@ -9,11 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
-        <activity android:name=".AddWorkActivity"></activity>
+        <activity android:name=".WorkInfoActivity"></activity>
+        <activity android:name=".AddWorkActivity" />
         <activity android:name=".ChatListActivity" />
         <activity android:name=".ChatActivity" />
         <activity android:name=".ProfileActivity" />
-        <activity android:name=".RegistrationActivity" />
+        <activity android:name=".authentication.RegistrationActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -21,7 +22,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".authentication.LoginActivity" />
     </application>
 
 </manifest>

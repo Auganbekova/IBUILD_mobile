@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/masters"
+        android:id="@+id/view_masters"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:listitem="@layout/master_layout" />

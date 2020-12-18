@@ -1,10 +1,11 @@
-package com.example.ibuild
+package com.example.ibuild.authentication
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
+import com.example.ibuild.R
 import com.example.ibuild.data_classes.User
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
@@ -31,6 +32,12 @@ class RegistrationActivity : AppCompatActivity() {
                     Log.d("checklength", "yes")
                 }
             }
+        }
+
+        txt_have_account.setOnClickListener {
+            val intent = Intent(this, LoginActivity::class.java)
+            startActivity(intent)
+            this.finish()
         }
 
         register.setOnClickListener {

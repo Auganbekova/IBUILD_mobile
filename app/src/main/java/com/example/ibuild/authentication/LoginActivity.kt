@@ -1,9 +1,11 @@
-package com.example.ibuild
+package com.example.ibuild.authentication
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import com.example.ibuild.MainActivity
+import com.example.ibuild.R
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_login.*
 
@@ -26,6 +28,7 @@ class LoginActivity : AppCompatActivity() {
         txt_dont_have_account.setOnClickListener {
             val intent = Intent(this, RegistrationActivity::class.java)
             startActivity(intent)
+
         }
     }
 
