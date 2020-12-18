@@ -82,7 +82,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="5dp">
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -98,6 +99,27 @@
                         android:text="Алексей"
                         android:textColor="#000000" />
                 </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text='Почта:' />
+
+                    <TextView
+                        android:id="@+id/staj_master"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:text="aikowa2212@gmail.com"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
             </LinearLayout>
 
 
@@ -139,13 +161,8 @@
 
         <LinearLayout
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="250dp"
             android:layout_gravity="center">
-
-            <ScrollView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center">
 
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/view_masters"
@@ -154,7 +171,6 @@
                     android:layout_gravity="center"
                     tools:listitem="@layout/master_layout" />
 
-            </ScrollView>
         </LinearLayout>
 
 

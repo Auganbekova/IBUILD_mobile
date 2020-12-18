@@ -44,7 +44,7 @@ class ChatActivity : AppCompatActivity() {
                 view_messages.adapter = MessageAdapter(messages.filter { message -> message.chatId == chatID })
             }
 
-        btn_start_conversation.setOnClickListener {
+        btn_send_message.setOnClickListener {
             createMessage(
                 Message(Date().toString(),chatID!!, txt_message.text.toString(), auth.currentUser!!.uid, Date())
             )
