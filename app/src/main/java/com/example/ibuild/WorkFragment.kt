@@ -15,6 +15,9 @@ import kotlinx.android.synthetic.main.fragment_work.*
 import kotlinx.android.synthetic.main.fragment_work.view.*
 
 class WorkFragment(contentLayoutId: Int) : Fragment(contentLayoutId) {
+    companion object {
+        const val WORKER_ID = "user_id"
+    }
 
     private val database by lazy { FirebaseFirestore.getInstance() }
 
@@ -43,6 +46,7 @@ class WorkFragment(contentLayoutId: Int) : Fragment(contentLayoutId) {
 
             view.view_masters.adapter = WorksAdapter(works, onItemClick = {
                 val intent = Intent(activity, WorkInfoActivity::class.java)
+                intent.putExtra(WORKER_ID, it.userId)
                 startActivity(intent)
             })
         }
