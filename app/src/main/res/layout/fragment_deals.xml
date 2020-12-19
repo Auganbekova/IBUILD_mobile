@@ -9,6 +9,7 @@
         android:layout_height="match_parent">
 
         <LinearLayout
+            android:background="@drawable/deal_back"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
@@ -18,8 +19,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
+                android:textColor="#000000"
                 android:text="1. ПРЕДМЕТ ДОГОВОРА" />
 
             <LinearLayout
@@ -30,14 +30,13 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textColor="#000000"
                     android:text="1.1. Работодатель принимает Работника на должность:" />
 
                 <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:text="_____________________" />
+                    android:textColor="#000000"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"/>
 
             </LinearLayout>
 
@@ -47,27 +46,25 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:textColor="#000000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
                     android:text="1.2. В соответствии с настоящим Договором Работник обязуется выполнять работу по определенной специальности, квалификации или должности с соблюдением трудового распорядка, исполнением актов Работодателя, а Работодатель обеспечивает условия труда, своевременно и в полном объеме выплачивает Работнику заработную плату и осуществляет иные выплаты, предусмотренные трудовым законодательством Республики Казахстан, трудовым, коллективным договорами, соглашением сторон. Место выполнение работы:" />
 
                 <EditText
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text='______________________' />
+                    android:textColor="#000000"
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"/>
 
 
             </LinearLayout>
 
             <TextView
+                android:textColor="#000000"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                android:layout_marginBottom="10dp"
                 android:text="1.3. Настоящий Договор регулирует трудовые отношения и связанные с ними иные правоотношения, возникающие между Сторонами по поводу осуществления ими определенной трудовой деятельности в процессе выполнения условий и обязательств по настоящему Договору." />
 
             <LinearLayout
@@ -76,16 +73,16 @@
                 android:orientation="vertical">
 
                 <TextView
+                    android:textColor="#000000"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
                     android:text="2. ПРАВА И ОБЯЗАННОСТИ РАБОТОДАТЕЛЯ " />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:textColor="#000000"
                     android:text="3.1.  Работодатель  имеет право:
 \n1) на свободу выбора при приеме на работу;
 \n2) изменять, дополнять, расторгать трудовые договоры с работниками в порядке и по основаниям, которые установлены   Кодексом;
@@ -137,14 +134,14 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="10dp"
                     android:gravity="center"
+                    android:textColor="#000000"
                     android:text="3. УСЛОВИЯ ОПЛАТЫ И ТРУДА" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:textColor="#000000"
                     android:text="3.1.Работнику устанавливаются:
   \n1) должностной оклад согласно штатному расписанию;
        \n2) поощрения в прямой зависимости от его личного трудового   вклада;
@@ -162,31 +159,57 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:textColor="#000000"
                     android:text="4. СРОК ДЕЙСТВИЯ ДОГОВОРА И УСЛОВИЯ ЕГО ПРЕКРАЩЕНИЯ" />
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="      4.1. Срок действия настоящего Договора составляет  1 (один) год .
-       Дата начала выполнения Работы   с ____________ года и оканчивается ___________ года.
-     4.2. В целях проверки соответствия квалификации Работника поручаемой работе, Работодатель устанавливает Работнику испытательный срок 2 (два) месяц.
+                android:textColor="#000000"
+                android:text="4.1. Срок действия настоящего Договора составляет  1 (один) год .
+       Дата начала выполнения Работы   с "/>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <EditText
+                        android:layout_width="110dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="года и оканчивается"/>
+                    <EditText
+                        android:layout_width="110dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"/>
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="года.
+     \n4.2. В целях проверки соответствия квалификации Работника поручаемой работе, Работодатель устанавливает Работнику испытательный срок 2 (два) месяц.
        При неудовлетворительном результате испытания Работодатель вправе расторгнуть  индивидуальный трудовой договор в установленном порядке. В период испытания на Работника распространяются условия настоящего Договора.
-4.3. Основания прекращения трудового договора
+\n4.3. Основания прекращения трудового договора
 Основаниями прекращения трудового договора являются:
-1) расторжение трудового договора по соглашению сторон;
-2) истечение срока трудового договора;
-3) расторжение трудового договора по инициативе Работодателя;
-4) расторжение трудового договора по инициативе Работника;
-5) обстоятельства, не зависящие от воли сторон;
-6) отказ Работника от продолжения трудовых отношений;
-7) переход Работника на выборную работу (должность) или назначение его на должность, исключающую возможность продолжения трудовых отношений, кроме случаев, предусмотренных законами Республики Казахстан;
-8) нарушение условий заключения трудового договора;
-"/>
+\n1) расторжение трудового договора по соглашению сторон;
+\n2) истечение срока трудового договора;
+\n3) расторжение трудового договора по инициативе Работодателя;
+\n4) расторжение трудового договора по инициативе Работника;
+\n5) обстоятельства, не зависящие от воли сторон;
+\n6) отказ Работника от продолжения трудовых отношений;
+\n7) переход Работника на выборную работу (должность) или назначение его на должность, исключающую возможность продолжения трудовых отношений, кроме случаев, предусмотренных законами Республики Казахстан;
+\n8) нарушение условий заключения трудового договора;"/>
             </LinearLayout>
 
             <CheckBox
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:text="Соглашаюсь со всеми условиями этого договора" />
+                android:textColor="#3F51B5"
+                android:text="Соглашаюсь со всеми условиями этого договора"
+                android:layout_marginBottom="50dp"/>
         </LinearLayout>
 
     </ScrollView>

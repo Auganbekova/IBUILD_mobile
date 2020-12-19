@@ -16,6 +16,7 @@
         android:background="@drawable/master_layout_background"
         android:paddingLeft="15dp"
         android:paddingRight="15dp"
+
         android:orientation="vertical">
 
         <androidx.cardview.widget.CardView
@@ -47,6 +48,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
+        android:layout_marginBottom="25dp"
         android:orientation="vertical">
 
         <TextView
