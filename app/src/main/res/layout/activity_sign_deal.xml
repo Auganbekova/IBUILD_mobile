@@ -3,7 +3,8 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    tools:context=".SignDealActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -36,11 +37,10 @@
                     android:text="1.1. Работодатель принимает Работника на должность:" />
 
                 <EditText
-                    android:id="@+id/edit_signed_deal_position"
-                    android:layout_width="300dp"
-                    android:layout_height="wrap_content"
+                    android:id="@+id/edit_deal_position"
                     android:textColor="#000000"
-                    android:enabled="false"/>
+                    android:layout_width="300dp"
+                    android:layout_height="wrap_content"/>
 
             </LinearLayout>
 
@@ -57,11 +57,10 @@
                     android:text="1.2. В соответствии с настоящим Договором Работник обязуется выполнять работу по определенной специальности, квалификации или должности с соблюдением трудового распорядка, исполнением актов Работодателя, а Работодатель обеспечивает условия труда, своевременно и в полном объеме выплачивает Работнику заработную плату и осуществляет иные выплаты, предусмотренные трудовым законодательством Республики Казахстан, трудовым, коллективным договорами, соглашением сторон. Место выполнение работы:" />
 
                 <EditText
-                    android:id="@+id/edit_signed_deal_place"
+                    android:id="@+id/edit_deal_place"
+                    android:textColor="#000000"
                     android:layout_width="300dp"
-                    android:layout_height="wrap_content"
-                    android:enabled="false"
-                    android:textColor="#000000" />
+                    android:layout_height="wrap_content"/>
 
 
             </LinearLayout>
@@ -167,21 +166,20 @@
                     android:layout_height="match_parent"
                     android:textColor="#000000"
                     android:text="4. СРОК ДЕЙСТВИЯ ДОГОВОРА И УСЛОВИЯ ЕГО ПРЕКРАЩЕНИЯ" />
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="#000000"
-                android:text="4.1. Срок действия настоящего Договора составляет  1 (один) год .
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000000"
+                    android:text="4.1. Срок действия настоящего Договора составляет  1 (один) год .
        Дата начала выполнения Работы   с "/>
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:orientation="horizontal">
                     <EditText
-                        android:id="@+id/edit_signed_deal_start"
+                        android:id="@+id/edit_deal_start"
                         android:layout_width="110dp"
                         android:layout_weight="1"
-                        android:enabled="false"
                         android:layout_height="wrap_content"/>
                     <TextView
                         android:layout_width="wrap_content"
@@ -189,10 +187,9 @@
                         android:layout_height="wrap_content"
                         android:text="года и оканчивается"/>
                     <EditText
-                        android:id="@+id/edit_signed_deal_end"
+                        android:id="@+id/edit_deal_end"
                         android:layout_width="110dp"
                         android:layout_weight="1"
-                        android:enabled="false"
                         android:layout_height="wrap_content"/>
                 </LinearLayout>
 
@@ -216,11 +213,10 @@
             </LinearLayout>
 
             <CheckBox
-                android:id="@+id/chb_signed_deal_agreement"
+                android:id="@+id/chb_deal_agreement"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:textColor="#3F51B5"
-                android:enabled="false"
                 android:text="Соглашаюсь со всеми условиями этого договора"
                 android:layout_marginBottom="30dp"/>
 
@@ -230,12 +226,12 @@
                 android:layout_marginBottom="30dp"
                 android:gravity="center">
                 <Button
-                    android:id="@+id/terminate_deal_check"
+                    android:id="@+id/send_deal_check"
                     android:layout_width="100dp"
                     android:layout_height="wrap_content"
                     android:background="@drawable/button_back"
                     android:textColor="#FFFFFF"
-                    android:text="Расторгнуть договор"/>
+                    android:text="Отправить"/>
             </LinearLayout>
         </LinearLayout>
 

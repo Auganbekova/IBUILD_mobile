@@ -104,6 +104,7 @@ class WorkFragment(contentLayoutId: Int) : Fragment(contentLayoutId) {
         recycler.adapter = WorksAdapter(works, onItemClick = {
             val intent = Intent(activity, WorkInfoActivity::class.java)
             intent.putExtra(WORKER_ID, it.userId)
+            intent.putExtra("work_title", it.title)
             startActivity(intent)
         })
     }

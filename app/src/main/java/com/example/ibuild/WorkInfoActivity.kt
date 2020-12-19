@@ -8,6 +8,7 @@ import androidx.core.view.isVisible
 import com.example.ibuild.WorkFragment.Companion.WORKER_ID
 import com.example.ibuild.data_classes.Chat
 import com.example.ibuild.data_classes.User
+import com.example.ibuild.data_classes.Work
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import kotlinx.android.synthetic.main.activity_work_info.*
@@ -35,8 +36,26 @@ class WorkInfoActivity : AppCompatActivity() {
 
     private fun setupViews(){
         val workerId = intent.getStringExtra(WORKER_ID)!!
+        val workTitle = intent.getStringExtra("work_title")!!
         btn_start_chat.isVisible = workerId != auth.uid
         btn_go_to_dogovor.isVisible = workerId != auth.uid
+
+        var workInfo: Work = Work()
+        database.collection("works")
+            .whereEqualTo("userId", workerId)
+            .whereEqualTo("title", workTitle)
+            .addSnapshotListener { value, error ->
+                workInfo = value?.documents?.map {
+                    it.toObject(Work::class.java)
+                }!![0] as Work
+                txt_info_title.text = workInfo.title
+                txt_info_category.text = workInfo.category
+                txt_info_experience.text = workInfo.experience
+                txt_info_self.text = workInfo.selfInfo
+                txt_info_price.text = workInfo.price
+            }
+
+
         var worker: User = User()
         database.collection("users")
             .whereEqualTo("uid", workerId)
@@ -62,6 +81,13 @@ class WorkInfoActivity : AppCompatActivity() {
                     startActivity(intent)
 
                 }
+        }
+
+        btn_go_to_dogovor.setOnClickListener {
+            val intent = Intent(this, SignDealActivity::class.java)
+            intent.putExtra("work_owner_id", workerId)
+            intent.putExtra("work_title", workInfo.title)
+            startActivity(intent)
         }
     }
 
