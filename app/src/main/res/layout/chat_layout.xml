@@ -34,7 +34,7 @@
                 android:textColor="#FFFFFF"
                 android:gravity="end"
                 android:layout_weight="1"
-                android:textSize="20sp"
+                android:textSize="10sp"
                 android:text="date"/>
         </LinearLayout>
         <TextView
