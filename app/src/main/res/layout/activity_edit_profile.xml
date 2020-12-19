@@ -3,14 +3,13 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#5EA3E8">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:gravity="center"
-        android:background="#5EA3E8"
-
         android:orientation="vertical">
 
 
@@ -37,8 +36,8 @@
                         android:layout_width="83dp"
                         android:layout_height="83dp"
                         android:adjustViewBounds="true"
-                        android:scaleType="centerCrop"
                         android:gravity="center"
+                        android:scaleType="centerCrop"
 
                         app:srcCompat="@mipmap/ic_launcher" />
                 </androidx.cardview.widget.CardView>
@@ -47,8 +46,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
+                android:layout_height="wrap_content"
                 android:layout_marginLeft="10dp"
                 android:layout_weight="1.5"
                 android:orientation="vertical">
@@ -62,54 +60,68 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
                         android:text='Имя:' />
 
                     <EditText
                         android:id="@+id/name_master"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="center"
-                        android:layout_marginLeft="5dp"
-                        android:text="Алексей"
-                        android:textSize="13sp"
-                        android:paddingRight="10dp"
-                        android:paddingLeft="10dp"
-                        android:background="@drawable/shape_back"
-                        android:textColor="#000000" />
-                </LinearLayout>
-
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginBottom="5dp">
-
-                    <TextView
                         android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
-                        android:text='Фамилия:' />
-
-                    <TextView
-                        android:id="@+id/surname_master"
-                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
                         android:layout_marginLeft="5dp"
+                        android:background="@drawable/shape_back"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp"
                         android:text="Алексей"
-                        android:textColor="#000000" />
+                        android:textColor="#000000"
+                        android:textSize="13sp" />
                 </LinearLayout>
+
 
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
+                    android:layout_marginBottom="5dp"
                     android:orientation="horizontal">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
+                        android:textColor="#FFFFFF"
+                        android:text='Фамилия:' />
+
+
+                    <EditText
+                        android:id="@+id/surname_master"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/shape_back"
+                        android:paddingLeft="10dp"
+                        android:paddingTop="5dp"
+                        android:paddingRight="10dp"
+                        android:paddingBottom="5dp"
+                        android:text="Алексей"
+                        android:textColor="#000000"
+                        android:textSize="13sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:textColor="#FFFFFF"
                         android:text='Почта:' />
 
                     <TextView
@@ -130,14 +142,65 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@drawable/master_layout_background"
+            android:layout_marginLeft="35dp"
             android:orientation="vertical">
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="start"
+                android:layout_marginBottom="5dp"
+                android:textColor="#FFFFFF"
+                android:text='Изменить пароль:' />
 
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="40dp"
+                android:padding="5dp"
+                android:background="@drawable/shape_back"
+                android:text="Текущий пароль"
+                android:textSize="13sp">
+
+            </EditText>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/shape_back"
+                android:layout_marginLeft="40dp"
+                android:text="Новый пароль"
+                android:padding="5dp"
+                android:textSize="13sp"></EditText>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="40dp"
+                android:padding="5dp"
+                android:background="@drawable/shape_back"
+                android:text="Повторите новый пароль"
+                android:textSize="13sp">
+
+            </EditText>
         </LinearLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp">
 
-
-
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_back"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:text="Сохранить"/>
+        </LinearLayout>
 
     </LinearLayout>
 

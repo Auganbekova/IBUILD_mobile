@@ -165,7 +165,8 @@
         <LinearLayout
             android:layout_width="370dp"
             android:layout_height="250dp"
-            android:layout_gravity="center">
+            android:layout_gravity="center"
+            android:background="@drawable/shape_back">
 
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/view_profile_masters"
