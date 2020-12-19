@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/master_layout_background"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/shape_back"
+        android:textColorHint="#636363">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/txt_find_title"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:fontFamily="@font/montserrat_medium"
+            android:gravity="top|left"
+            android:hint="Название"
+            android:lines="8"
+            android:maxLines="10"
+            android:minLines="1"
+            android:paddingLeft="10dp"
+            android:scrollbars="vertical"
+            android:textColor="#000000"
+            android:textColorHint="#6F6F6F" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Spinner
+        android:id="@+id/spin_find_category"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/shape_back"
+        android:spinnerMode="dropdown"
+        android:entries="@array/categories"/>
+
+</LinearLayout>

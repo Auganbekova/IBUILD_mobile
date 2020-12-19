@@ -15,6 +15,7 @@ import com.example.ibuild.adapters.WorksAdapter
 import com.example.ibuild.data_classes.Work
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.Query
+import com.google.firebase.firestore.QuerySnapshot
 import kotlinx.android.synthetic.main.fragment_work.*
 import kotlinx.android.synthetic.main.fragment_work.view.*
 
@@ -70,7 +71,9 @@ class WorkFragment(contentLayoutId: Int) : Fragment(contentLayoutId) {
         val base = database.collection("works")
 
         if (category != "Все категории" && title == ""){
+            base.whereEqualTo("category", category).addSnapshotListener { value, error ->
 
+            }
         }
         base.addSnapshotListener { value, error ->
             val works = value?.documents?.map {
@@ -83,5 +86,17 @@ class WorkFragment(contentLayoutId: Int) : Fragment(contentLayoutId) {
                 startActivity(intent)
             })
         }
+    }
+
+    private fun inner(value: QuerySnapshot?){
+        val works = value?.documents?.map {
+            it.toObject(Work::class.java)
+        } as List<Work>
+
+        recycler.adapter = WorksAdapter(works, onItemClick = {
+            val intent = Intent(activity, WorkInfoActivity::class.java)
+            intent.putExtra(WORKER_ID, it.userId)
+            startActivity(intent)
+        })
     }
 }
