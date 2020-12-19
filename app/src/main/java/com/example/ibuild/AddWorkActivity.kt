@@ -42,7 +42,7 @@ class AddWorkActivity : AppCompatActivity() {
             val price = txt_price.text.toString()
             val selectedCategory = spin_category.selectedItem.toString()
 
-            val work = Work(auth.uid!!, title, experience, self, price, selectedCategory)
+            val work = Work(auth.uid!!, title, experience, self, price, selectedCategory, false)
             database.collection("works")
                 .add(work).addOnSuccessListener {
                     Toast.makeText(this, "Work was loaded", Toast.LENGTH_LONG).show()

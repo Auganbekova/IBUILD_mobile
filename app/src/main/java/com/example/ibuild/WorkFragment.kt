@@ -77,18 +77,18 @@ class WorkFragment(contentLayoutId: Int) : Fragment(contentLayoutId) {
     }
 
     private fun createRecycler(recycler: RecyclerView, category: String, title: String){
-        val base = database.collection("works")
+        val base = database.collection("works").whereEqualTo("finished", false)
 
         if (category != "Все категории" && title == ""){
             base.whereEqualTo("category", category).addSnapshotListener { value, error ->
                 inner(recycler, value)
             }
         } else if (category == "Все категории" && title != ""){
-            base.whereArrayContains("title", title).addSnapshotListener { value, error ->
+            base.whereEqualTo("title", title).addSnapshotListener { value, error ->
                 inner(recycler, value)
             }
         } else if (category != "Все категории" && title != ""){
-            base.whereArrayContains("title", title).whereEqualTo("category", category).addSnapshotListener { value, error ->
+            base.whereEqualTo("title", title).whereEqualTo("category", category).addSnapshotListener { value, error ->
                 inner(recycler, value)
             }
         } else base.addSnapshotListener { value, error ->

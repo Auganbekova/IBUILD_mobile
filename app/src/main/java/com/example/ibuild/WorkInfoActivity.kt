@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.core.view.isVisible
 import com.example.ibuild.WorkFragment.Companion.WORKER_ID
 import com.example.ibuild.data_classes.Chat
 import com.example.ibuild.data_classes.User
@@ -34,6 +35,8 @@ class WorkInfoActivity : AppCompatActivity() {
 
     private fun setupViews(){
         val workerId = intent.getStringExtra(WORKER_ID)!!
+        btn_start_chat.isVisible = workerId != auth.uid
+        btn_go_to_dogovor.isVisible = workerId != auth.uid
         var worker: User = User()
         database.collection("users")
             .whereEqualTo("uid", workerId)

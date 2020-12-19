@@ -111,7 +111,7 @@
                         android:text='Почта:' />
 
                     <TextView
-                        android:id="@+id/staj_master"
+                        android:id="@+id/email_master"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
@@ -144,12 +144,14 @@
                     android:text="Работы:" />
 
                 <CheckBox
+                    android:id="@+id/chb_work_finished"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:text="незаконченные" />
 
                 <CheckBox
+                    android:id="@+id/chb_work_unfinished"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
@@ -165,7 +167,7 @@
             android:layout_gravity="center">
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/view_masters"
+                android:id="@+id/view_profile_masters"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"

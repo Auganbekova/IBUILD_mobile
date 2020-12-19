@@ -6,7 +6,8 @@ data class Work (
     val experience: String,
     val selfInfo: String,
     val price: String,
-    val category: String
+    val category: String,
+    val finished: Boolean
 ) {
-  constructor() : this("", "", "", "", "", "")
+  constructor() : this("", "", "", "", "", "", false)
 }
