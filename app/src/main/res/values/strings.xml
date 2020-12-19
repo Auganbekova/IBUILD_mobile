@@ -3,6 +3,7 @@
     <string name="don_t_have_an_account"><u>У вас нет аккаунта?</u></string>
     <string name="you_have_an_account_sign_in"><u>У вас есть аккаунт? Нажмите для входа в систему!</u></string>
     <string-array name="categories">
+        <item>Все категории</item>
         <item>Крыша</item>
         <item>Забор</item>
         <item>Стена</item>
