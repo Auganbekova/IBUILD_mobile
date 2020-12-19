@@ -34,8 +34,8 @@ class ChatActivity : AppCompatActivity() {
             reverseLayout = false
         }
         val chatID = intent.getStringExtra("data")
-        val partnerUsername = intent.getStringExtra("partnerUsername")
-        supportActionBar!!.title = partnerUsername
+        val partnerFullname = intent.getStringExtra("partnerUsername")
+        supportActionBar!!.title = partnerFullname
 
         database.collection("messages")
             .addSnapshotListener { querySnapshot, firebaseFirestoreException ->

@@ -47,9 +47,9 @@ class ChatsListFragment(contentLayoutId: Int) : Fragment(contentLayoutId) {
                             val intent = Intent(activity, ChatActivity::class.java)
                             intent.putExtra("data", it.id)
                             if (it.participantIds[0] == auth.currentUser!!.uid ) {
-                                intent.putExtra("partnerUsername", it.participants[1].email)
+                                intent.putExtra("partnerUsername", it.participants[1].name+" " + it.participants[1].surname)
                             } else if(it.participantIds[1] == auth.currentUser!!.uid ) {
-                                intent.putExtra("partnerUsername", it.participants[0].email)
+                                intent.putExtra("partnerUsername", it.participants[0].name+" " + it.participants[0].surname)
                             }
 
                             startActivity(intent)

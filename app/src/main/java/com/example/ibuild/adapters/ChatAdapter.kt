@@ -30,9 +30,9 @@ class ChatAdapter (
     inner class ItemViewHolder(private val view: View): RecyclerView.ViewHolder(view) {
         fun bindItem(chats: Chat){
             if (chats.participantIds[0] == auth.currentUser!!.uid) {
-                view.chat_username.text = chats.participants[1].email
+                view.chat_username.text = chats.participants[1].name+" " + chats.participants[1].surname
             } else if (chats.participantIds[1] == auth.currentUser!!.uid) {
-                view.chat_username.text = chats.participants[0].email
+                view.chat_username.text = chats.participants[0].name+" " + chats.participants[0].surname
             }
 
             view.chat_last_message.text = chats.lastMessage
