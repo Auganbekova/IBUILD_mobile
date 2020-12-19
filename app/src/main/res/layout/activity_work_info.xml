@@ -1,21 +1,210 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".WorkInfoActivity">
 
-    <Button
-        android:id="@+id/btn_start_chat"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Начать беседу"/>
-    <Button
-        android:id="@+id/btn_go_to_dogovor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Подписать договор"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
 
+        <androidx.cardview.widget.CardView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:elevation="10dp"
+            app:cardCornerRadius="50dp">
+
+            <ImageView
+                android:id="@+id/master_profile"
+                android:layout_width="83dp"
+                android:layout_height="83dp"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                app:srcCompat="@mipmap/ic_launcher" />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/section_back"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:gravity="start"
+                android:text="Заголовок:"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Заголовок"
+                android:padding="5dp"
+                android:textColor="#000000"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/shape_back" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/section_back"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:gravity="start"
+                android:text="Тип Работы:"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Type"
+                android:padding="5dp"
+                android:textColor="#000000"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/shape_back" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/section_back"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:gravity="start"
+                android:text="Стаж:"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Стаж"
+                android:padding="5dp"
+                android:textColor="#000000"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/shape_back" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/section_back"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:gravity="start"
+                android:text="Ваши предложения:"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Предложения"
+                android:padding="5dp"
+                android:textColor="#000000"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/shape_back" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/section_back"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:gravity="start"
+                android:text="Цена:"
+                android:textColor="#FFFFFF"
+                android:textSize="20dp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Цена"
+                android:padding="5dp"
+                android:textColor="#000000"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/shape_back" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:id="@+id/btn_start_chat"
+                android:background="@drawable/button_back"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:padding="5dp"
+                android:text="Начать беседу" />
+
+            <Button
+                android:id="@+id/btn_go_to_dogovor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:background="@drawable/button_back"
+                android:layout_marginLeft="15dp"
+                android:padding="5dp"
+                android:text="Подписать договор" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
 </LinearLayout>
