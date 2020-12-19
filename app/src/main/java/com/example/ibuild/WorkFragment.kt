@@ -72,23 +72,12 @@ class WorkFragment(contentLayoutId: Int) : Fragment(contentLayoutId) {
 
         if (category != "Все категории" && title == ""){
             base.whereEqualTo("category", category).addSnapshotListener { value, error ->
-
+                inner(recycler, value)
             }
-        }
-        base.addSnapshotListener { value, error ->
-            val works = value?.documents?.map {
-                it.toObject(Work::class.java)
-            } as List<Work>
-
-            recycler.adapter = WorksAdapter(works, onItemClick = {
-                val intent = Intent(activity, WorkInfoActivity::class.java)
-                intent.putExtra(WORKER_ID, it.userId)
-                startActivity(intent)
-            })
         }
     }
 
-    private fun inner(value: QuerySnapshot?){
+    private fun inner(recycler: RecyclerView, value: QuerySnapshot?){
         val works = value?.documents?.map {
             it.toObject(Work::class.java)
         } as List<Work>
