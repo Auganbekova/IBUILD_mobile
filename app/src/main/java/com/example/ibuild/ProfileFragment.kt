@@ -2,6 +2,7 @@ package com.example.ibuild
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -33,18 +34,17 @@ class ProfileFragment(contentLayoutId: Int) : Fragment(contentLayoutId) {
     }
 
     private fun setupViews(view: View){
-        var user = User()
-            database.collection("users")
+        database.collection("users")
             .whereEqualTo("uid", auth.uid)
             .addSnapshotListener { value, error ->
-                user = value?.documents?.map {
+                val user = value?.documents?.map {
                     it.toObject(User::class.java)
                 }!![0] as User
+                view.name_master.text = user.name
+                view.surname_master.text = user.surname
+                view.email_master.text = user.email
             }
 
-        view.name_master.text = user.name
-        view.surname_master.text = user.surname
-        view.email_master.text = user.email
 
         view.view_profile_masters.layoutManager = LinearLayoutManager(context)
         var finished = false
