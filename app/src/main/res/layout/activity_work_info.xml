@@ -12,5 +12,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Начать беседу"/>
+    <Button
+        android:id="@+id/btn_go_to_dogovor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Подписать договор"/>
 
 </LinearLayout>
