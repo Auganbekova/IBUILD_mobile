@@ -59,6 +59,7 @@ class ChatActivity : AppCompatActivity() {
         btn_send_message.setOnClickListener {
             val date = Date().toString()
             val message = Message(date,chatID!!, txt_message.text.toString(), auth.currentUser!!.uid, Date())
+            txt_message.setText("")
             createMessage(
                 message
             )
