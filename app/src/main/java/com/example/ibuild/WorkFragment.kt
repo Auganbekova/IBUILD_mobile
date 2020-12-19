@@ -14,9 +14,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.ibuild.adapters.WorksAdapter
 import com.example.ibuild.data_classes.Work
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.Query
 import com.google.firebase.firestore.QuerySnapshot
-import kotlinx.android.synthetic.main.fragment_work.*
+import kotlinx.android.synthetic.main.filter_dialog_layout.view.*
 import kotlinx.android.synthetic.main.fragment_work.view.*
 
 class WorkFragment(contentLayoutId: Int) : Fragment(contentLayoutId) {
@@ -37,6 +36,9 @@ class WorkFragment(contentLayoutId: Int) : Fragment(contentLayoutId) {
     }
 
     private fun setupViews(view: View, context: Context){
+        var title = ""
+        var category = "Все категории"
+        var categoryIndex = 0
         view.btn_add_work.setOnClickListener {
             val intent = Intent(activity, AddWorkActivity::class.java)
             activity!!.startActivity(intent)
@@ -48,12 +50,19 @@ class WorkFragment(contentLayoutId: Int) : Fragment(contentLayoutId) {
             val builder = AlertDialog.Builder(context)
             // Get the layout inflater
             val inflater = requireActivity().layoutInflater;
+            val filterView = inflater.inflate(R.layout.filter_dialog_layout, null)
+            filterView.txt_find_title.setText(title.trim())
+            filterView.spin_find_category.setSelection(categoryIndex)
 
-            builder.setView(inflater.inflate(R.layout.filter_dialog_layout, null))
+            builder.setView(filterView)
                 // Add action buttons
                 .setPositiveButton("Найти",
                     DialogInterface.OnClickListener { dialog, id ->
-                        // sign in the user ...
+                        category = filterView.spin_find_category.selectedItem.toString()
+                        categoryIndex = filterView.spin_find_category.selectedItemPosition
+
+                        title = filterView.txt_find_title.text.toString().trim()
+                        createRecycler(view.view_masters, category, title)
                     })
                 .setNegativeButton("Отмена",
                     DialogInterface.OnClickListener { dialog, id ->
@@ -63,7 +72,7 @@ class WorkFragment(contentLayoutId: Int) : Fragment(contentLayoutId) {
             builder.show()
         }
 
-        createRecycler(view.view_masters, "Все категории", "")
+        createRecycler(view.view_masters, category, title)
 
     }
 
@@ -74,6 +83,16 @@ class WorkFragment(contentLayoutId: Int) : Fragment(contentLayoutId) {
             base.whereEqualTo("category", category).addSnapshotListener { value, error ->
                 inner(recycler, value)
             }
+        } else if (category == "Все категории" && title != ""){
+            base.whereArrayContains("title", title).addSnapshotListener { value, error ->
+                inner(recycler, value)
+            }
+        } else if (category != "Все категории" && title != ""){
+            base.whereArrayContains("title", title).whereEqualTo("category", category).addSnapshotListener { value, error ->
+                inner(recycler, value)
+            }
+        } else base.addSnapshotListener { value, error ->
+            inner(recycler, value)
         }
     }
 
@@ -88,4 +107,6 @@ class WorkFragment(contentLayoutId: Int) : Fragment(contentLayoutId) {
             startActivity(intent)
         })
     }
+
+
 }
