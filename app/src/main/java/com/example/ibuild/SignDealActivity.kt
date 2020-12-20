@@ -22,7 +22,7 @@ class SignDealActivity : AppCompatActivity() {
         setupViews()
     }
 
-    private fun setupViews(){
+    private fun setupViews() {
         val workOwner = intent.getStringExtra("work_owner_id")!!
         val workTitle = intent.getStringExtra("work_title")!!
 
@@ -32,14 +32,19 @@ class SignDealActivity : AppCompatActivity() {
             val startDate = edit_deal_start.text.toString()
             val endDate = edit_deal_end.text.toString()
 
-//            val deal = Deal(workOwner, auth.uid, )
-//            database.collection("works")
-//                .add(work).addOnSuccessListener {
-//                    Toast.makeText(this, "Work was loaded", Toast.LENGTH_LONG).show()
-//                    val intent = Intent(this, MainActivity::class.java)
-//
-//                    startActivity(intent)
-//                }
+            database.collection("works")
+                .whereEqualTo("userId", workOwner)
+                .whereEqualTo("title", workTitle)
+                .addSnapshotListener { querySnapshot, firebaseFirestoreException ->
+                    val deal = Deal(workOwner, auth.uid!!, workTitle, position, place, startDate, endDate)
+                    database.collection("deals")
+                        .add(deal).addOnSuccessListener {
+                            Toast.makeText(this, "Deal was loaded", Toast.LENGTH_LONG).show()
+                            val intent = Intent(this, MainActivity::class.java)
+                            startActivity(intent)
+                        }
+
+                }
         }
 
     }

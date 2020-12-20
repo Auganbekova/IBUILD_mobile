@@ -3,9 +3,12 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center">
 
     <ScrollView
+        android:id="@+id/deals_scroll_view"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -240,4 +243,11 @@
         </LinearLayout>
 
     </ScrollView>
+    <TextView
+        android:id="@+id/txt_jobless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:textSize="30sp"
+        android:text="У вас нет работы"/>
 </RelativeLayout>
